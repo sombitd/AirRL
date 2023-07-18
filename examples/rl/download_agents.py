@@ -14,8 +14,7 @@ def download_agents(download_dir="downloads"):
     team_info.yml, otherwise the authentication will fail.
     """
     import air_hockey_challenge
-    with open(os.path.dirname(air_hockey_challenge.__path__[0]) +
-              "/air_hockey_agent/team_info.yml") as stream:
+    with open("air_hockey_agent/team_info.yml") as stream:
         secrets = yaml.safe_load(stream)
 
     AK = secrets["AK"]
